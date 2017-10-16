@@ -1,0 +1,1 @@
+This service consumes all the Orders produced onto the RabbitMQ
