@@ -38,6 +38,8 @@ public class OrderItem {
 	private String status;	
 	
 	private Long orderId;
+	
+	private int Quantity;
 
 	public long getItemId() {
 		return itemId;
@@ -113,6 +115,14 @@ public class OrderItem {
 	
 	public OrderItem() {
 		
+	}
+
+	public int getQuantity() {
+		return Quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		Quantity = quantity;
 	}
 	
 	

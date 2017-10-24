@@ -154,7 +154,15 @@ public class OrderMaster {
 	
 	@Override
 	public String toString() {
-		return this.getOrderDescription();
+		
+		String displayMasterRecord = "Master Order ID: " + this.getOrderId() + ", Master Order Description: " + this.getOrderDescription() + "\n\n\n\n";
+		List<OrderItem> childOrders = this.getOrderItems();
+		String displayChildRecords = "";
+		for (OrderItem item: childOrders) {
+			displayChildRecords = displayChildRecords + "Order Item ID: " + item.getOrderId() + ", Description: " + item.getDescription() + "\n\n";			
+		}
+		
+		return displayMasterRecord + displayChildRecords;
 	}
 	
     
